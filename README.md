@@ -26,7 +26,7 @@ Before coding, it helps to visualize what we are building:
 
 In a professional environment, frontend and backend code are separated into distinct folders. This prevents dependency conflicts (e.g., `node_modules` vs. Python `venv`).
 
-
+```
 my-fullstack-app/
 ├── README.md                  # Project documentation
 ├── .gitignore                 # Ignore venv, node_modules, etc.
@@ -54,3 +54,4 @@ my-fullstack-app/
         ├── App.css            # Global styles
         └── index.js           # React entry point
 
+```
