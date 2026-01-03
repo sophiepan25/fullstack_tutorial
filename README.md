@@ -23,6 +23,9 @@ Before coding, it helps to visualize what we are building:
 ---
 
 ## 1. Professional Directory Structure
+<img width="2816" height="1536" alt="Gemini_Generated_Image_bbg7tgbbg7tgbbg7" src="https://github.com/user-attachments/assets/09e84fd2-c3e8-4673-81d1-f73d153d79de" />
+
+
 
 In a professional environment, frontend and backend code are separated into distinct folders. This prevents dependency conflicts (e.g., `node_modules` vs. Python `venv`).
 
