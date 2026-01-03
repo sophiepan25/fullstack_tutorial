@@ -112,6 +112,30 @@ def get_dashboard_stats():
     return data
 ```
 
+### Step C: app.py (Flask Server)
+
+This file exposes an API endpoint that the frontend can call.
+
+```
+# backend/app.py
+from flask import Flask, jsonify
+from flask_cors import CORS
+import dashboard
+
+app = Flask(__name__)
+CORS(app)  # Allows React (different port) to access this API
+
+@app.route('/api/stats', methods=['GET'])
+def stats():
+    data = dashboard.get_dashboard_stats()
+    return jsonify(data)
+
+if __name__ == '__main__':
+    app.run(debug=True, port=5000)
+```
+
+
+
 ## 3. Frontend (React)
 
 The frontend fetches data from the Flask backend and displays it.
@@ -119,6 +143,19 @@ The frontend fetches data from the Flask backend and displays it.
 Prerequisites
 
 Node.js installed
+
+This is usually the cleanest Homebrew solution.
+```
+brew update
+brew reinstall icu4c
+brew reinstall node
+```
+
+Then verify:
+```
+npx create-react-app frontend
+```
+
 
 ### Step A: Frontend Setup
 
