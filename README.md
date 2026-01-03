@@ -144,6 +144,19 @@ Prerequisites
 
 Node.js installed
 
+This is usually the cleanest Homebrew solution.
+```
+brew update
+brew reinstall icu4c
+brew reinstall node
+```
+
+Then verify:
+```
+npx create-react-app frontend
+```
+
+
 ### Step A: Frontend Setup
 
 From the project root, run:
